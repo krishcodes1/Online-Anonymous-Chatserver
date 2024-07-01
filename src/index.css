@@ -1,0 +1,228 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #161618; /* Dark mode background color */
+  color: #ffffff; /* Light color for text */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #818181; /* Gray color for headings */
+}
+
+a {
+  color: #212124; /* Dark gray color for links */
+}
+
+
+.timestamp {
+  font-size: 0.8em;
+  color: #ccc;
+}
+
+.message img {
+  max-width: 200px;
+  max-height: 200px;
+  border: 1px solid #fff;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+input {
+  padding: 10px;
+  font-size: 1.2em;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px rgba(129,129,129,0.5); /* Adjusted shadow color */
+}
+
+button{
+  border: none;
+  padding: 10px;
+  background: green;
+  color:#fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px rgba(129,129,129,0.5); /* Adjusted shadow color */
+}
+
+.container{
+  position: relative;
+  border-radius: 15px; /* Add this line */
+}
+
+
+.register {
+  position: fixed;
+  padding:30px;
+  box-shadow: 0px 0px 20px 10px rgba(255,255,255,0.8), 0px 0px 30px 15px rgba(0,0,0,0.1);
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column; /* Change this to column to stack the input and button vertically */
+  align-items: center; /* Center the items horizontally */
+  justify-content: center; /* Center the items vertically */
+  border-radius: 15px;
+  background: linear-gradient(270deg, #ffffff, #f5f9ff);
+  background-size: 200% 200%;
+  animation: Gradient 2s ease infinite;
+}
+
+.register input {
+  margin-bottom: 20px;
+  background-color: #212124;
+  color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(255,255,255,0.5);
+}
+
+.register-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'San Francisco', sans-serif;
+  background-color: #161618;
+  color: #ffffff;
+  border: 1px solid #818181;
+  border-radius: 15px;
+  padding: 10px 20px;
+}
+
+.button-logo {
+  width: 10px; /* Adjust this to make the logo smaller */
+  height: auto;
+  margin-right: 10px;
+  align-self: center; /* Align the logo with the text */
+}
+
+.title {
+  font-size: 2em;
+  text-align: center; /* Center the title */
+  color: #ffffff;
+  font-weight: bold; /* Make the text bold */
+  animation: float 2s ease-in-out infinite;
+  position: absolute;
+  bottom: -75px; /* Position the title at the bottom of the page */
+  width: 100%; /* Make the title span the full width of the page */
+  text-shadow: 3px 3px 5px #000000, 6px 6px 10px rgba(0, 0, 0, 0.5); /* Add a more dramatic shadow to the title */
+}
+
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.chat-box {
+  box-shadow: 0 2.8px 2.2px rgba(129,129,129,0.5), 0 6.7px 5.3px rgba(129,129,129,0.5), 0 12.5px 10px rgba(129,129,129,0.5), 0 22.3px 17.9px rgba(129,129,129,0.5), 0 41.8px 33.4px rgba(129,129,129,0.5), 0 100px 80px rgba(129,129,129,0.5); /* Adjusted shadow color */
+  margin: 60px 50px; /* Increase the top margin to lower the chatbox */
+  height: 600px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+}
+
+.member-list {
+  width: 20%;
+}
+
+.chat-content {
+  width: 80%;
+  margin-left: 10px;
+}
+
+.chat-messages {
+  height: 80%;
+  border: 1px solid #000;
+}
+
+.send-message {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.input-message {
+  width: 90%;
+  border-radius: 50px;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.send-button {
+  width: 10%;
+  border-radius: 50px;
+  margin-left: 5px;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px rgba(129,129,129,0.5); /* Adjusted shadow color */
+}
+
+.member {
+  padding: 10px;
+  background: #0000ff; /* Blue background for members */
+  border: #000;
+  cursor: pointer;
+  margin: 5px 2px;
+  box-shadow: 0 8px 8px -4px lightblue;
+}
+
+.member.active {
+  background: blueviolet;
+  color: #fff;
+}
+
+.member:hover {
+  background: grey;
+  color: #fff;
+}
+
+.avatar {
+  background-color: cornflowerblue;
+  padding: 3px 5px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.avatar.self {
+  color: #000;
+  background-color: greenyellow;
+}
+
+.message {
+  padding: 5px;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  margin: 5px 10px;
+}
+
+.message-data {
+  padding: 5px;
+}
+
+.message.self {
+  justify-content: end;
+}
+
+/* Add this class for the word "chatroom" */
+.chatroom {
+  color: #0aff0a; /* Green color for the word "chatroom" */
+}
